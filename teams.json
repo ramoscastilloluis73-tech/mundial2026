@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "is_sample": true,
+    "note": "Datos de ejemplo. El GitHub Action (update-data.yml) sobreescribe este archivo con la información real y vigente cada vez que corre.",
+    "updated_at": null
+  },
+  "groups": {
+    "A": [
+      { "code": "MEX", "iso2": "mx", "name": "México",      "colors": ["#006847", "#FFFFFF", "#CE1126"] },
+      { "code": "RSA", "iso2": "za", "name": "Sudáfrica",   "colors": ["#007A4D", "#FFB81C", "#000000"] },
+      { "code": "CZE", "iso2": "cz", "name": "Chequia",     "colors": ["#11457E", "#FFFFFF", "#D7141A"] },
+      { "code": "KOR", "iso2": "kr", "name": "Corea del Sur","colors": ["#003478", "#FFFFFF", "#C60C30"] }
+    ],
+    "B": [
+      { "code": "CAN", "iso2": "ca", "name": "Canadá",      "colors": ["#D80621", "#FFFFFF"] },
+      { "code": "TBD", "iso2": "un", "name": "Por confirmar","colors": ["#3A4A45", "#9FB0A8"] },
+      { "code": "TBD", "iso2": "un", "name": "Por confirmar","colors": ["#3A4A45", "#9FB0A8"] },
+      { "code": "TBD", "iso2": "un", "name": "Por confirmar","colors": ["#3A4A45", "#9FB0A8"] }
+    ],
+    "D": [
+      { "code": "USA", "iso2": "us", "name": "Estados Unidos","colors": ["#3C3B6E", "#FFFFFF", "#B22234"] },
+      { "code": "TBD", "iso2": "un", "name": "Por confirmar","colors": ["#3A4A45", "#9FB0A8"] },
+      { "code": "TBD", "iso2": "un", "name": "Por confirmar","colors": ["#3A4A45", "#9FB0A8"] },
+      { "code": "TBD", "iso2": "un", "name": "Por confirmar","colors": ["#3A4A45", "#9FB0A8"] }
+    ]
+  }
+}

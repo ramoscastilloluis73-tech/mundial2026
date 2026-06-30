@@ -1,0 +1,34 @@
+name: Actualizar datos del Mundial 2026
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # cada 15 minutos. Ajusta a tu gusto (ej. "0 * * * *" = cada hora)
+  workflow_dispatch: {}        # te permite correrlo manualmente desde la pestaña "Actions"
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Ejecutar script de actualización
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+        run: node scripts/fetch-data.js
+
+      - name: Confirmar y subir cambios (si los hay)
+        run: |
+          git config user.name "mundial-bot"
+          git config user.email "actions@github.com"
+          git add data/*.json
+          git diff --quiet --cached || git commit -m "Actualización automática de datos del Mundial 2026"
+          git push

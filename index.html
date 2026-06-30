@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mundial 2026 · Hora Perú</title>
+<meta name="description" content="Calendario, resultados y clasificación del Mundial 2026 en hora de Perú, actualizado automáticamente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__brand">
+    <span class="topbar__ball" aria-hidden="true">⚽</span>
+    <div>
+      <p class="topbar__title">MUNDIAL 2026</p>
+      <p class="topbar__sub">Hora de Perú · 🇵🇪</p>
+    </div>
+  </div>
+  <nav class="topbar__nav">
+    <a href="#hoy">Hoy</a>
+    <a href="#grupos">Clasificación</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#paises">Países</a>
+  </nav>
+  <div class="topbar__status">
+    <span class="dot dot--live" id="liveDot"></span>
+    <span id="lastUpdated">Sincronizando…</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero__text">
+      <p class="hero__eyebrow">Próximo partido en hora peruana</p>
+      <h1 id="heroMatch" class="hero__match">Cargando próximo partido…</h1>
+      <div class="hero__countdown" id="countdown" aria-live="polite">
+        <div class="countdown__block"><span id="cdDays">00</span><label>días</label></div>
+        <div class="countdown__block"><span id="cdHours">00</span><label>hrs</label></div>
+        <div class="countdown__block"><span id="cdMin">00</span><label>min</label></div>
+        <div class="countdown__block"><span id="cdSec">00</span><label>seg</label></div>
+      </div>
+    </div>
+    <div class="hero__ticker" aria-hidden="true">
+      <div class="ticker__track" id="tickerTrack"></div>
+    </div>
+  </section>
+
+  <section id="hoy" class="section">
+    <h2 class="section__title"><span class="section__num">Partidos</span>de hoy en Perú</h2>
+    <p class="section__hint">Horarios convertidos automáticamente a America/Lima (UTC-5).</p>
+    <div class="cards-row" id="todayMatches">
+      <p class="empty">Buscando los partidos de hoy…</p>
+    </div>
+  </section>
+
+  <section id="grupos" class="section">
+    <h2 class="section__title"><span class="section__num">Tabla de</span>clasificación</h2>
+    <p class="section__hint">Los equipos eliminados matemáticamente se retiran solos de esta tabla.</p>
+    <div class="groups-grid" id="groupsGrid"></div>
+  </section>
+
+  <section id="resultados" class="section">
+    <h2 class="section__title"><span class="section__num">Ganadores</span>por fecha</h2>
+    <div class="results-list" id="resultsList"></div>
+  </section>
+
+  <section id="paises" class="section section--theme">
+    <h2 class="section__title"><span class="section__num">Elige un</span>país</h2>
+    <p class="section__hint">El panel cambia a los colores de la bandera del equipo seleccionado.</p>
+    <div class="country-picker" id="countryPicker"></div>
+
+    <div class="country-detail" id="countryDetail">
+      <p class="empty">Selecciona una selección para ver su rendimiento.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Datos sincronizados automáticamente vía GitHub Actions · <span id="footerUpdated">—</span></p>
+  <p class="footer__muted">Proyecto no oficial, hecho para hinchas peruanos. Fuente de datos configurable en <code>scripts/fetch-data.js</code>.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

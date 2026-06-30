@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "is_sample": true,
+    "note": "Resultados de ejemplo. Se reemplaza automáticamente con los resultados reales cada vez que corre el GitHub Action.",
+    "updated_at": null
+  },
+  "por_fecha": [
+    {
+      "fecha": "2026-06-11",
+      "partidos": [
+        { "local": "MEX", "visitante": "RSA", "goles_local": 2, "goles_visitante": 0, "ganador": "MEX" },
+        { "local": "KOR", "visitante": "CZE", "goles_local": 1, "goles_visitante": 1, "ganador": null }
+      ]
+    }
+  ]
+}

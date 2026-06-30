@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "is_sample": true,
+    "note": "Tabla de ejemplo. Se reemplaza automáticamente con la clasificación real cada vez que corre el GitHub Action.",
+    "updated_at": null,
+    "stage": "Fase de grupos"
+  },
+  "groups": {
+    "A": [
+      { "code": "MEX", "pj": 3, "g": 3, "e": 0, "p": 0, "gf": 5, "gc": 0, "pts": 9, "clasificado": true },
+      { "code": "RSA", "pj": 3, "g": 1, "e": 1, "p": 1, "gf": 3, "gc": 3, "pts": 4, "clasificado": true },
+      { "code": "CZE", "pj": 3, "g": 1, "e": 1, "p": 1, "gf": 2, "gc": 3, "pts": 4, "clasificado": false },
+      { "code": "KOR", "pj": 3, "g": 0, "e": 0, "p": 3, "gf": 1, "gc": 5, "pts": 0, "clasificado": false }
+    ]
+  }
+}
